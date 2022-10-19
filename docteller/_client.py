@@ -57,9 +57,6 @@ class DoctellerClient(object):
             files=data_dict,
         )
 
-        if response.status_code == 429:
-            docteller_log.info("Without an API Key, ")
-
         response.raise_for_status()
         response_json = response.json()
 
