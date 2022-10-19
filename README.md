@@ -10,7 +10,7 @@ Basic usage:
 >>> image_path = "path/to/image.jpg"
 >>> api_key = "copy-it-from-your-account-on-docteller.com"
 
->>> docteller_client = DoctellerClient(api_key)
+>>> docteller_client = DoctellerClient(api_key=api_key)
 >>> docteller_client.read(image_path)
 {} # TODO JSON example
 ```
