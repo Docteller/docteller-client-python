@@ -1,21 +1,22 @@
 # docteller
-** docteller ** transcodes from one image format to another
 
-It especially deals with docteller from pdf and base64 into more useful formats (jpg, or raw np array)
+**Docteller** reads an image and turns it into meaningful JSON data.
+
+Basic usage:
 
 ```python
->>> import docteller
->>> path = 'path/to/images.pdf'
->>> images = docteller.transcode(path, output_format='jpg')
+>>> from docteller import DoctellerClient
 
->>> image_bytestream = ...
->>> images = docteller.transcode(image_bytestream, output_format='numpy')
+>>> image_path = "path/to/image.jpg"
+>>> api_key = "copy-it-from-your-account-on-docteller.com"
+
+>>> docteller_client = DoctellerClient(api_key)
+>>> docteller_client.read(image_path)
+{} # TODO JSON example
 ```
 
 ## Installation
-nothing special to do except import docteller
 
-## Run tests
-```console
-$ python -m unittest
+```bash
+pip install docteller
 ```
